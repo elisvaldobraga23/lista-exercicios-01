@@ -1,8 +1,9 @@
 const PROMPT = require("prompt-sync")()
 
-// =======================================================================
-//                               EXERCÍCIOS
-// =======================================================================
+// ====================================================================================================================
+//                                                       EXERCÍCIOS
+// ====================================================================================================================
+
 
 // Ex01: Escreva um programa que pergunte a nota de um aluno (de 0 a 10). Exiba se o
 //       aluno foi Aprovado (nota maior ou igual a 7), em Recuperação (nota entre 5 e 6.9)
@@ -20,7 +21,7 @@ const PROMPT = require("prompt-sync")()
 //     console.log("O aluno está: REPROVADO!")
 // }
 
-// ----------------------------------------------------------------------------------------------
+// |--------------------------------------------------------------------------------------------------------------------|
 
 // Ex02: Crie um programa que pergunte o ano de nascimento de uma pessoa e calcule
 //       sua idade. Com base na idade, exiba se ela é criança (até 12 anos), adolescente
@@ -56,7 +57,7 @@ const PROMPT = require("prompt-sync")()
 //         console.log("Você é um idoso(a)!")
 // }
 
-// ----------------------------------------------------------------------------------------------
+// |--------------------------------------------------------------------------------------------------------------------|
 
 // Ex03: Escreva um programa que pergunte o salário mensal de um funcionário e o
 //       percentual de aumento concedido pela empresa. Caso o salário seja menor que
@@ -80,7 +81,7 @@ const PROMPT = require("prompt-sync")()
 // Novo salário: R$${novoValor.toFixed(2).replace(".", ",")}
 // `)
 
-// ---------------------------------------------------------------------------------------------
+// |--------------------------------------------------------------------------------------------------------------------|
 
 // Ex04: Crie um programa que leia três números inteiros e exiba o maior deles, sem utilizar
 //       funções prontas como Math.max().
@@ -101,7 +102,7 @@ const PROMPT = require("prompt-sync")()
 
 // console.log(maior, "É o número maior!")
 
-// ---------------------------------------------------------------------------------------------
+// |--------------------------------------------------------------------------------------------------------------------|
 
 // Ex05: Uma loja oferece desconto progressivo conforme o valor da compra. Faça um
 //       programa que leia o valor total de uma compra e aplique as seguintes regras:
@@ -140,7 +141,7 @@ const PROMPT = require("prompt-sync")()
 //     console.log("Valor Inválido!")
 // }
 
-// ---------------------------------------------------------------------------------------------
+// |--------------------------------------------------------------------------------------------------------------------|
 
 // Ex06: Crie um programa de caixa eletrônico simplificado. O usuário informa o valor que
 //       deseja sacar (múltiplo de 10). O programa deve calcular e exibir a menor
@@ -192,7 +193,7 @@ const PROMPT = require("prompt-sync")()
 // }
 
 
-// ---------------------------------------------------------------------------------------------
+// |--------------------------------------------------------------------------------------------------------------------|
 
 // Ex: 07: Faça um programa que funcione como uma calculadora básica. Leia dois
 //         números e uma operação desejada (+, -, *, /). Usando switch case, realize a
@@ -269,7 +270,7 @@ const PROMPT = require("prompt-sync")()
 
 //     }
 
-// ---------------------------------------------------------------------------------------------
+// |--------------------------------------------------------------------------------------------------------------------|
 
 // Ex08: Uma pizzaria cobra por tamanho e tipo de borda. Faça um programa que leia o
 //       tamanho da pizza (P, M ou G) e o tipo de borda (tradicional ou recheada) usando
@@ -277,58 +278,254 @@ const PROMPT = require("prompt-sync")()
 //       recheada acrescenta R$ 8,00 em qualquer tamanho. Exiba o valor total do pedido.
 
 
-console.log("=================================================")
-console.log("              Faça o seu pedido!")
-console.log("=================================================")
-let tamanhoPizza = PROMPT("Escolha o tamanho da pizza [P, M ou G]: ").toUpperCase()
-console.log("-------------------------------------------------")
+// console.log("=================================================")
+// console.log("              Faça o seu pedido!")
+// console.log("=================================================")
 
-console.log("Tipos de Borda")
-console.log("[1] - Tradicional")
-console.log("[2] - Recheada")
-let tipoBorda = PROMPT("Escolha o tipo: ")
+// // Escolhendo o tamanho da pizza
+// let tamanhoPizza = PROMPT("Escolha o tamanho da pizza [P, M ou G]: ").toUpperCase()
 
-let valorPizza = 0
+// // Verificação para o0 tamanho
+// if(!["P", "M", "G"].includes(tamanhoPizza)){
+//     console.log("Opção inválida, escolha somente P, M ou G!")
+// } else{
+//     console.log("Tipos de Borda")
+//     console.log("acréscimo de R$ 8,00 para borda recheada")
+//     console.log("[1] - Tradicional")
+//     console.log("[2] - Recheada")
 
-let valorTotalPedido = 0
+//     // PEgando o tipo [Tradicional ou Recheada]
+//     let tipoBorda = PROMPT("Escolha o tipo: ")
 
-switch(tamanhoPizza){
-    case "P":
-        valorPizza = 25
-        tamanhoPizza = "Pequeno"
-        break
+//     // Verificação do tipo
+//     if(!["1", "2"].includes(tipoBorda)){
+//         console.log("-------------------------------------------------")
+//         console.log("Opção inválida!")
+//         console.log("Digite [1] para Tradicional ou [2] para Recheada")
+//     } else{
+
+//         let valorPizza = 0
+//         // SWITCH [Tamanho da Pizza]
+//         switch(tamanhoPizza){
+//             case "P":
+//                 valorPizza = 25
+//                 tamanhoPizza = "Pequeno"
+//                 break
+                
+//             case "M":
+//                 valorPizza = 35
+//                 tamanhoPizza = "Média"
+//                 break
+                    
+//             case "G":
+//                 valorPizza = 45
+//                 tamanhoPizza = "Grande"
+//                 break
         
-    case "M":
-        valorPizza = 35
-        tamanhoPizza = "Média"
-        break
+//         }
+//         let valorTotalPedido = valorPizza
+//         let temBordaRecheada = false
+        
+//         // SWITCH [Tipo da Borda]
+//         switch(tipoBorda){
+//             case "1":
+//                 tipoBorda = "Tradicional"
+//                 break
+        
+//             case "2":
+//                 tipoBorda = "Recheada"
+//                 valorTotalPedido += 8
+//                 temBordaRecheada = true
+//                 break
+//         }
+        
+//         console.log("-------------------------------------------------")
+//         console.log("                 Detalhe Pedido")
+//         console.log("-------------------------------------------------")
+        
+//         console.log("Tamanho da Pizza: ", tamanhoPizza)
+//         console.log("Tipo de Borda: ", tipoBorda)
+//         console.log("Valor Pizza: ", "R$", valorPizza.toFixed(2).replace(".", ","))
+
+//         // Verificação se tem borda recheada ou não
+//         if(temBordaRecheada){
+//             console.log("Valor Borda Recheada: R$ 8,00")
+//             console.log("Total a pagar: ", "R$", valorTotalPedido.toFixed(2).replace(".", ","))
+//         }
+//     }
+// }
+
+
+// console.log("=================================================")
+
+
+// |--------------------------------------------------------------------------------------------------------------------|
+
+// Ex09: Crie um programa que leia o número do mês (1 a 12) e, usando switch case, exiba
+//       o nome do mês correspondente e quantos dias ele possui. Para fevereiro,
+//       pergunte ao usuário se o ano é bissexto e ajuste a quantidade de dias para 29
+//       caso seja.
+
+// console.log("1 - Jan  | 2 - Fev  | 3 - Mar  | 4 - Abr")
+// console.log("5 - Maio | 6 - Jun  | 7 - Jul  | 8 - Ago")
+// console.log("9 - Set  | 10 - Out | 11 - Nov | 12 - Dez")
+// // Pegando o mês
+// let mesNumero = Number(PROMPT("Escolha o mês (1 a 12): "))
+
+// let mesString = ""
+// let quantidadeDias = 0
+// let bissexto = false
+
+// switch(mesNumero){
+//     case 1:
+//         mesString = "Janeiro"
+//         quantidadeDias = 31
+//         break
+    
+//     case 2:
+        
+//         mesString = "Fevereiro"
+
+//         let ehBissexto = PROMPT("É Bissexto: [1] - NÃO | [2] - SIM: ")
+
+//         switch(ehBissexto){
+//             case "1":
+//                 quantidadeDias = 28
+//                 break
             
-    case "G":
-        valorPizza = 45
-        tamanhoPizza = "Grande"
-        break
+//             case "2":
+//                 quantidadeDias = 29
+//                 bissexto = true
+//                 break
 
-}
+//             default:
+//                 console.log("Opção Inválida!")
+//                 console.log("Digite [1] para NÃO ou [2] para SIM")
+//                 quantidadeDias = 0
+//         }
+//         break
 
-switch(tipoBorda){
-    case "1":
-        tipoBorda = "Tradicional"
-        break
+//     case 3:
+//         mesString = "Março"
+//         quantidadeDias = 31
+//         break
 
-    case "2":
-        tipoBorda = "Recheada"
-        valorTotalPedido = valorPizza + 8
-}
+//     case 4:
+//         mesString = "Abril"
+//         quantidadeDias = 30
+//         break
 
-console.log("-------------------------------------------------")
-console.log("                 Detalhe Pedido")
-console.log("-------------------------------------------------")
+//     case 5:
+//         mesString = "Maio"
+//         quantidadeDias = 31
+//         break
 
-console.log("Tamanho da Pizza: ", tamanhoPizza)
-console.log("Tipo de Borda: ", tipoBorda)
-console.log("Valor Pizza: ", valorPizza.toFixed(2).replace(".", ","))
-if(valorTotalPedido > 0){
-    console.log("Valor com Borda: ", valorTotalPedido.toFixed(2).replace(".", ","))
-}
+//     case 6:
+//         mesString = "Junho"
+//         quantidadeDias = 30
+//         break
 
-console.log("=================================================")
+//     case 7:
+//         mesString = "Julho"
+//         quantidadeDias = 31
+//         break
+
+//     case 8:
+//         mesString = "Agosto"
+//         quantidadeDias = 31
+//         break
+
+//     case 9:
+//         mesString = "Setembro"
+//         quantidadeDias = 30
+//         break
+
+//     case 10:
+//         mesString = "Outubro"
+//         quantidadeDias = 31
+//         break
+
+//     case 11:
+//         mesString = "Novembro"
+//         quantidadeDias = 30
+//         break
+
+//     case 12:
+//         mesString = "Dezembro"
+//         quantidadeDias = 31
+//         break
+
+
+//     default:
+//         console.log("Mês inválido! Digite um número entre 1 e 12.")
+
+// }
+
+
+// if (mesNumero >= 1 && mesNumero <= 12 && quantidadeDias > 0) {
+//     if (bissexto) {
+//         console.log(`No mês ${mesString} (Ano Bissexto), tem ${quantidadeDias} dias`)
+//     } else {
+//         console.log(`No mês ${mesString}, tem ${quantidadeDias} dias`)
+//     }
+// }
+
+// |--------------------------------------------------------------------------------------------------------------------|
+
+
+// Ex10: Um estacionamento cobra por faixas de tempo. Faça um programa que leia
+//       quantas horas um veículo ficou estacionado e, usando switch case com
+//       intervalos, calcule o valor a pagar conforme a tabela: 1a hora = R$ 8,00; 2a hora =
+//       R$ 6,00; 3a hora = R$ 4,00; acima de 3 horas = R$ 4,00 pelas primeiras 3 horas mais
+//       R$ 2,00 por hora adicional. Exiba o tempo total e o valor cobrado.
+
+// console.log("===========================================================")
+// console.log("                     Estacionamento")
+// console.log("===========================================================")
+// console.log("Tabela de Preço")
+// console.log("-----------------------------------------------------------")
+// console.log("1 hora = R$8,00 | 2 horas = R$6,00 | 3 horas = R$4,00")
+// console.log("Mais de 3 horas = R$4,00 pelas primeiras 3 horas")
+// console.log("Mais R$2,00 por hora adicional")
+// console.log("-----------------------------------------------------------")
+// let horaEstacionamento = Number(PROMPT("Digite o tempo de permanência do veiculo (em horas): "))
+// let valorPagar = 0
+// let valorAdicional = 0
+
+// if(Number.isNaN(horaEstacionamento) ||
+//   horaEstacionamento < 0 ||
+//   !Number.isInteger(horaEstacionamento)){
+//     console.log("valor inválido!")
+// } else{
+    
+//     switch(true){
+//         case horaEstacionamento === 1:
+//             valorPagar = 8
+//             break
+    
+    
+//         case horaEstacionamento === 2:
+//             valorPagar = 6
+//             break
+    
+//         case horaEstacionamento === 3:
+//             valorPagar = 4
+//             break
+    
+//         case horaEstacionamento > 3 :
+//             let horaRestante = horaEstacionamento - 3
+//             valorAdicional = horaRestante * 2
+//             valorPagar = 4 + valorAdicional
+//             break
+//     }
+    
+//     console.log("===========================================================")
+//     console.log("Detalhe de Pagamento")
+//     console.log("-----------------------------------------------------------")
+//     console.log(`Tempo total de permanência: ${horaEstacionamento} h  `)
+//     if(horaEstacionamento > 3){
+//         console.log(`Valor adicional: ${valorAdicional.toFixed(2).replace(".", ",")}`)
+//     }
+//     console.log(`Valor total: ${valorPagar.toFixed(2).replace(".", ",")}`)
+//     console.log("===========================================================")
+// }
