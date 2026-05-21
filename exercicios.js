@@ -1,5 +1,3 @@
-const PROMPT = require("prompt-sync")()
-
 // ====================================================================================================================
 //                                                       EXERCÍCIOS
 // ====================================================================================================================
@@ -8,6 +6,8 @@ const PROMPT = require("prompt-sync")()
 // Ex01: Escreva um programa que pergunte a nota de um aluno (de 0 a 10). Exiba se o
 //       aluno foi Aprovado (nota maior ou igual a 7), em Recuperação (nota entre 5 e 6.9)
 //       ou Reprovado (nota menor que 5).
+
+// const PROMPT = require("prompt-sync")()
 
 // let nota = Number(PROMPT("Informe sua nota (de 0 a 10): "))
 
@@ -26,6 +26,8 @@ const PROMPT = require("prompt-sync")()
 // Ex02: Crie um programa que pergunte o ano de nascimento de uma pessoa e calcule
 //       sua idade. Com base na idade, exiba se ela é criança (até 12 anos), adolescente
 //       (de 13 a 17 anos), adulta (de 18 a 59 anos) ou idosa (60 anos ou mais).
+
+// const PROMPT = require("prompt-sync")()
 
 // let anoNascimento = Number(PROMPT("Informe o ano do seu nascimento (com 4 dígitos): "))
 // let anoAtual = new Date().getFullYear()
@@ -64,6 +66,8 @@ const PROMPT = require("prompt-sync")()
 //       R$ 1.500,00, o percentual de aumento deve ser dobrado automaticamente. Exiba o
 //       novo salário do funcionário.
 
+// const PROMPT = require("prompt-sync")()
+
 // let salario = Number(PROMPT("Informe o salário atual do funcionário: "))
 // let percentualAumento = Number(PROMPT("Informe o percentual de Aumento: "))
 
@@ -85,6 +89,8 @@ const PROMPT = require("prompt-sync")()
 
 // Ex04: Crie um programa que leia três números inteiros e exiba o maior deles, sem utilizar
 //       funções prontas como Math.max().
+
+// const PROMPT = require("prompt-sync")()
 
 // let numero1 = Number(PROMPT("Digite 1º número: "))
 // let numero2 = Number(PROMPT("Digite 2º número: "))
@@ -110,6 +116,8 @@ const PROMPT = require("prompt-sync")()
 //       299,99 recebem 10% de desconto; compras entre R$ 300,00 e R$ 499,99 recebem
 //       15% de desconto; compras acima de R$ 500,00 recebem 20% de desconto. Exiba o
 //       valor original, o desconto aplicado e o valor final a pagar.     
+
+// const PROMPT = require("prompt-sync")()
 
 // let valorTotal = Number(PROMPT("Valor total da Compra: "))
 // let desconto = 0
@@ -147,6 +155,8 @@ const PROMPT = require("prompt-sync")()
 //       deseja sacar (múltiplo de 10). O programa deve calcular e exibir a menor
 //       quantidade possível de cédulas de R$ 100, R$ 50, R$ 20 e R$ 10 necessárias para
 //       compor o saque.
+
+// const PROMPT = require("prompt-sync")()
 
 // let valorSaque = Number(PROMPT("Informe o valor que deseja sacar: "))
 // let quantia = valorSaque
@@ -199,6 +209,9 @@ const PROMPT = require("prompt-sync")()
 //         números e uma operação desejada (+, -, *, /). Usando switch case, realize a
 //         operação correspondente e exiba o resultado. Trate o caso de divisão por zero e
 //         de operação inválida.
+
+// const PROMPT = require("prompt-sync")()
+
 // console.log("====================================")
 // console.log("            CALCULADORA")
 // console.log("====================================")
@@ -277,6 +290,7 @@ const PROMPT = require("prompt-sync")()
 //       switch case. Os preços base são: P = R$ 25,00, M = R$ 35,00, G = R$ 45,00. A borda
 //       recheada acrescenta R$ 8,00 em qualquer tamanho. Exiba o valor total do pedido.
 
+// const PROMPT = require("prompt-sync")()
 
 // console.log("=================================================")
 // console.log("              Faça o seu pedido!")
@@ -365,6 +379,8 @@ const PROMPT = require("prompt-sync")()
 //       o nome do mês correspondente e quantos dias ele possui. Para fevereiro,
 //       pergunte ao usuário se o ano é bissexto e ajuste a quantidade de dias para 29
 //       caso seja.
+
+// const PROMPT = require("prompt-sync")()
 
 // console.log("1 - Jan  | 2 - Fev  | 3 - Mar  | 4 - Abr")
 // console.log("5 - Maio | 6 - Jun  | 7 - Jul  | 8 - Ago")
@@ -479,6 +495,8 @@ const PROMPT = require("prompt-sync")()
 //       R$ 6,00; 3a hora = R$ 4,00; acima de 3 horas = R$ 4,00 pelas primeiras 3 horas mais
 //       R$ 2,00 por hora adicional. Exiba o tempo total e o valor cobrado.
 
+// const PROMPT = require("prompt-sync")()
+
 // console.log("===========================================================")
 // console.log("                     Estacionamento")
 // console.log("===========================================================")
@@ -505,11 +523,11 @@ const PROMPT = require("prompt-sync")()
     
     
 //         case horaEstacionamento === 2:
-//             valorPagar = 6
+//             valorPagar = 8 + 6
 //             break
     
 //         case horaEstacionamento === 3:
-//             valorPagar = 4
+//             valorPagar = 8 + 6 + 4
 //             break
     
 //         case horaEstacionamento > 3 :
